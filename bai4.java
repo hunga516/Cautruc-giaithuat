@@ -9,6 +9,11 @@ public class bai4 {
         System.out.println("4.Thoat");
         Scanner sc = new Scanner(System.in);
         int chon = sc.nextInt();
+        do{
+            System.out.println("Vui long nhap so 1 2 3 4 tu ban phim");
+            chon = sc.nextInt();
+        }while (chon < 0 || chon > 4);
+         
         switch (chon) {
             case 1:
                 System.out.println("a =");
@@ -31,11 +36,14 @@ public class bai4 {
                 a = sc.nextInt();
                 bai3.tinhTienDien(a);
                 break;
-                default:
+            case 4:
                 System.exit(0);
+            default:
 
+            System.exit(0);
         }
-    }
+    
+}
 
     public static void main(String[] args) {
         ChucNangMenu();
