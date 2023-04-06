@@ -7,6 +7,13 @@ public class HinhChuNhat extends Hinh {
 		this.cd=cd;
 		this.cr=cr;
 	}
+	public HinhChuNhat(){}
+	public void setCd(float cd) {
+		this.cd=cd;
+	}
+	public void setCr(float cr) {
+		this.cr=cr;
+	}
 	@Override
 	public String toString() {
 		return "HinhChuNhat [cd=" + cd + ", cr=" + cr + "]";

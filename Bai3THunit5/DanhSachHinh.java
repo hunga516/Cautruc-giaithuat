@@ -6,12 +6,11 @@ import java.util.ArrayList;
 public class DanhSachHinh {
 	private ArrayList<Hinh> danhSach ;
 
-	public DanhSachHinh(ArrayList<Hinh> danhSach) {
-		this.danhSach = danhSach;
-	}
-
 	public DanhSachHinh() {
 		this.danhSach= new ArrayList<Hinh>();
+	}
+	public DanhSachHinh(ArrayList<Hinh> danhSach) {
+		this.danhSach = danhSach;
 	}
 	public void Them(Hinh h1) {
 		this.danhSach.add(h1);
@@ -21,5 +20,5 @@ public class DanhSachHinh {
 			System.out.println(hinh);
 		}
 	}
-	
+
 }

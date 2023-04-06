@@ -6,6 +6,11 @@ public class HinhTron extends Hinh {
 	public HinhTron(float r) {
 		this.r=r;
 	}
+	public HinhTron(){}
+
+	public void setBanKinh(float r) {
+		this.r=r;
+	}
 	@Override
 	public String toString() {
 		return "HinhTron [r=" + r + "]";

@@ -4,25 +4,20 @@ import java.util.Scanner;
 
 public class main {
 
-    private static HinhTron nhapHinhTron() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("nhap ban kinh");
-        int r = input.nextInt();
-        return new HinhTron(r);
-    }
-
-    private static HinhChuNhat nhapHinhChuNhat() {
-        Scanner input = new Scanner(System.in);
-        System.out.println("nhap cd va cr");
-        int cd = input.nextInt();
-        int cr = input.nextInt();
-        return new HinhChuNhat(cd, cr);
-    }
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HinhTron hinhTron = new HinhTron();
+        HinhChuNhat hinhChuNhat = new HinhChuNhat();
 
-        HinhTron hinhTron = nhapHinhTron();
-        HinhChuNhat hinhChuNhat = nhapHinhChuNhat();
+        System.out.println("nhap ban kinh:");
+        hinhTron.setBanKinh(sc.nextFloat());
+
+        System.out.println("Nhap cd va cr:");
+        hinhChuNhat.setCd(sc.nextFloat());
+        hinhChuNhat.setCr(sc.nextFloat());
+
+        System.out.println("Thong tin hinh tron:" + hinhTron.toString());
+        System.out.println("Thong tin hinh chu nhat:"+ hinhChuNhat.toString());
 
         System.out.println(
                 "thong tin hinh tron: " + hinhTron.toString() + " dien tich cua no la: " + hinhTron.dienTich());
@@ -34,7 +29,7 @@ public class main {
         System.out.println("cac hinh nam trong mang la");
         dsh.Them(hinhChuNhat);
         dsh.Them(hinhTron);
-        dsh.inDanhSach();
+        dsh.inDanhSach(); 
     }
 
 }
